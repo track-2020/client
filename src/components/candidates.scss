@@ -1,0 +1,33 @@
+:local(.Candidates) {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  figure {
+    height: 5em;
+    width: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  img {
+    height: 100%;
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: .2em;
+  }
+}
+
