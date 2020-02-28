@@ -16,21 +16,24 @@ const Auth = ({ history }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
-    history.push('/');
+    verifyUser(email, password, history);
   };
 
   return (
     <div className="auth">
       <form onSubmit={onSubmit}>
-        <label>
-                    email
-          <input name='email' type="email" onChange={handleChange}/>
+        <header>
+          <h1>Sign In / Sign Up</h1>
+        </header>
+
+        <label>email
+          <input name='email' type="email" onChange={handleChange} required/>
         </label>
-        <label>
-                    password
-          <input name='password' type="text" onChange={handleChange}/>
+
+        <label>password
+          <input name='password' type="text" onChange={handleChange} required/>
         </label>
+
         <button>Sign Up</button>
       </form>
     </div>
@@ -42,3 +45,17 @@ Auth.propTypes = {
 };
 
 export default Auth;
+
+
+
+// check to see if user exists and password matches
+// delete after sign in/signup routes have been made and implemented
+const users = {
+  'email@email.com': 'pass'
+};
+
+const verifyUser = (email, pass, history) => {
+  if(!users[email]) history.push('/signup');
+  else if(users[email] && users[email] !== pass) alert('Email and password do not match');
+  else history.push('/');
+};
