@@ -25,13 +25,8 @@ export default [
     points: 9
   },
   {
-    name: 'Elizabeth Warren',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRV3u4H1TapTA_WxlS-28quKJcO-BSEQRSnSVt-cp6fAfu1Aek5',
+    name: 'Michael Bloomberg',
+    image: 'https://www.thenation.com/wp-content/uploads/2020/02/Trump-bloomberg-getty-img.jpg',
     points: 27
-  },
-  {
-    name: 'Amy Klobuchar',
-    image: 'https://cdn.cnn.com/cnnnext/dam/assets/190610182606-03-amy-klobuchar-gallery-super-169.jpeg',
-    points: 9
   }
 ];

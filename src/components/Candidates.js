@@ -4,19 +4,23 @@ import styles from './candidates.scss';
 import ScoreModal from './ScoreModal';
 
 const Candidates = ({ candies }) => {
-  const [show, setShow] = useState(false);    
+  const [show, setShow] = useState(false);
+  const [candidate, setCandidate] = useState('');
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  // console.log('show', show);
+  const handleShow = ({ target }) => {
+    setCandidate(target.name);
+    setShow(true);
+  };
+
   return (
     <>
-      <ScoreModal close={handleClose} show={show} />
+      <ScoreModal candidate={candidate} close={handleClose} show={show} />
       <ul className={styles.Candidates}>
         {candies.map(i => {
-          return <li onClick={handleShow} key={i.name}>
+          return <li name={i.name} onClick={handleShow} key={i.name}>
             <figure>
-              <img src={i.image}/>
+              <img name={i.name} src={i.image} />
             </figure>
             <h2>{i.name}</h2>
           </li>;
