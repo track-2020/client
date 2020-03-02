@@ -20,7 +20,7 @@ const Candidates = ({ candies }) => {
         {candies.map(i => {
           return <li name={i.name} onClick={handleShow} key={i.name}>
             <figure>
-              <img name={i.name} src={i.image} />
+              <img alt={i.name} src={i.image} />
             </figure>
             <h2>{i.name}</h2>
           </li>;
