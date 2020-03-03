@@ -18,9 +18,9 @@ const Candidates = ({ candies }) => {
       <ScoreModal candidate={candidate} close={handleClose} show={show} />
       <ul className={styles.Candidates}>
         {candies.map(i => {
-          return <li name={i.name} onClick={handleShow} key={i.name}>
+          return <li name={i.id} onClick={handleShow} key={i.id}>
             <figure>
-              <img alt={i.name} src={i.image} />
+              <img name={i.id} alt={i.id} src={i.image} />
             </figure>
             <h2>{i.name}</h2>
           </li>;
