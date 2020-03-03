@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Landing.scss';
 import Candidates from '../components/Candidates';
 import candies from '../../assets/candidates';
@@ -17,7 +18,7 @@ const Landing = () => {
       </section>
 
       <footer>
-        <h1>Home</h1>
+        <Link to="/summary"><h1>View Scores</h1></Link>
       </footer>
     </div>
   );
