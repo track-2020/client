@@ -28,6 +28,26 @@ module.exports = {
           }
         }
       },
+      // {
+      //   test: /\.scss$/,
+      //   use: [
+      //     'style-loader', 
+      //     {
+      //       loader: 'css-loader',
+      //       options: {
+      //         modules: 'global',
+      //         sourceMap: true,
+      //         importLoaders: 1,
+      //       },
+      //     },
+      //     {
+      //       loader: 'sass-loader',
+      //       options: {
+      //         sourceMap: true,
+      //       },
+      //     },
+      //   ],
+      // },
       {
         test: /.css$/,
         use: [

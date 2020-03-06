@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 const Auth = ({ history }) => {
   const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const stateChanges = {
     email: (value) => setEmail(value),
     password: (value) => setPassword(value),
+    username: (value) => setUsername(value)
   };
 
   const handleChange = ({ target }) => {
@@ -16,20 +18,21 @@ const Auth = ({ history }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
-    history.push('/');
+    // eslint-disable-next-line no-console
+    console.log(email, username, password);
+    history.push('/user-issues');
   };
 
   return (
     <div className="auth">
       <form onSubmit={onSubmit}>
         <label>
-                    email
-          <input name='email' type="email" onChange={handleChange}/>
+          email
+          <input name='email' type="email" onChange={handleChange} />
         </label>
         <label>
-                    password
-          <input name='password' type="text" onChange={handleChange}/>
+          password
+          <input name='password' type="text" onChange={handleChange} />
         </label>
         <button>Sign Up</button>
       </form>
