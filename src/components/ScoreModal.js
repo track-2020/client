@@ -4,7 +4,6 @@ import candies from '../../assets/candidates';
 import { incrementScore } from '../services/scoreServices';
 
 const ScoreModal = ({ show, close, candidate }) => {
-console.log('candidate', candidate);
   const handleScoreAssignment = ({ target }) => {
     incrementScore(candidate, target.name);
   };

@@ -18,6 +18,7 @@ const Auth = ({ history }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    // eslint-disable-next-line no-console
     console.log(email, username, password);
     history.push('/user-issues');
   };
@@ -26,12 +27,12 @@ const Auth = ({ history }) => {
     <div className="auth">
       <form onSubmit={onSubmit}>
         <label>
-                    email
-          <input name='email' type="email" onChange={handleChange}/>
+          email
+          <input name='email' type="email" onChange={handleChange} />
         </label>
         <label>
-                    password
-          <input name='password' type="text" onChange={handleChange}/>
+          password
+          <input name='password' type="text" onChange={handleChange} />
         </label>
         <button>Sign Up</button>
       </form>

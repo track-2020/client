@@ -59,4 +59,4 @@ export default [
     label: 'Racial Justice',
     value: 'racialJustice',
   },
-]
+];
