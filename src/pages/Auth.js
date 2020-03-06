@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 const Auth = ({ history }) => {
   const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const stateChanges = {
     email: (value) => setEmail(value),
     password: (value) => setPassword(value),
+    username: (value) => setUsername(value)
   };
 
   const handleChange = ({ target }) => {
@@ -16,8 +18,8 @@ const Auth = ({ history }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
-    history.push('/');
+    console.log(email, username, password);
+    history.push('/user-issues');
   };
 
   return (

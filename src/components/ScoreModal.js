@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import candies from '../../assets/candidates';
-import { incrementScore } from '../services/databaseServices';
+import { incrementScore } from '../services/scoreServices';
 
 const ScoreModal = ({ show, close, candidate }) => {
 console.log('candidate', candidate);
